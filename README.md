@@ -1,32 +1,26 @@
-# Assignment6modifications
-# German Credit Risk Analysis
+# Credit Risk Modeling & Explainability
 
-## Overview
-This project analyzes the German Credit Risk dataset using various machine learning interpretability techniques. The goal is to understand how different features influence credit risk predictions using a Logistic Regression model.
+An exploratory Logistic Regression analysis of the German Credit Risk dataset using PDP, ICE, ALE, and permutation importance.
 
-## Dataset
-The German Credit Risk dataset contains 1000 credit applications with the following features:
+## Business value
+Show how an analyst can inspect relationships between applicant attributes and model predictions, and communicate global and individual effects.
 
-### Numerical Features:
-- **Age**: The age of the credit applicant
-- **Credit amount**: The amount of credit requested
-- **Duration**: The duration of the credit in months
-- **Job**: The employment category of the applicant
+## Technical strengths
+Python, Pandas, scikit-learn, Matplotlib, Seaborn, and ALEPython.
+Missing account categories are filled as unknown, categorical fields are one-hot encoded, and the data is divided into an 80/20 training/test split.
 
-### Categorical Features:
-- **Sex**: The applicant's gender (male/female)
-- **Housing**: Type of housing (own/rent/free)
-- **Saving accounts**: Status of saving accounts (little/moderate/quite rich/rich/unknown)
-- **Checking account**: Status of checking accounts (little/moderate/rich/unknown)
-- **Purpose**: Purpose of the credit (car/furniture/radio/TV/education/business/etc.)
+## Target definition
+The implemented mapping is good=1 and bad=0. A prediction for class 1 therefore refers to good credit status, not greater default risk.
 
-### Target Variable:
-- **Risk**: Credit risk classification (good/bad)
+## Explore and run
+Open [the notebook](Assignment6modifications.ipynb) in Colab. Provide the German credit CSV, update the personal Drive path and course-template paths, and install the imported dependencies.
 
-## Methods
-The analysis includes:
-- **Correlation Analysis of numeric features**: Identifies relationships among numerical features and potential multicollinearity.
-- **Partial Dependence Plots (PDP)**: Provides global feature influence, showing how average predictions change with different feature values.
-- **Individual Conditional Expectation (ICE) plots**: Offers individualized explanations of feature effects, revealing heterogeneous responses across samples.
-- **Accumulated Local Effects (ALE) plots**: Provides a more accurate depiction of local and non-linear feature effects, particularly when features are correlated.
-- **Feature Importance Analysis using permutation importance**: Ranks features based on their contribution to model predictions.
+## Limitations and next steps
+- Add the original dataset citation and access instructions.
+- Report class balance, a majority-class baseline, bad-credit recall, F1, ROC-AUC, and calibration.
+- The notebook does not currently report a full predictive-performance evaluation.
+- For classifier ALE, verify the prediction function explains the intended class probability.
+- Assess subgroup performance and document limitations before suggesting operational lending use.
+
+## Project context
+Developed by Yiren Shen for Duke's AIPI 590 Explainable AI course. This is a separate credit-risk project, not a duplicate of the housing-price analysis.
