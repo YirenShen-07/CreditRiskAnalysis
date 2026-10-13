@@ -13,7 +13,7 @@ Missing account categories are filled as unknown, categorical fields are one-hot
 The implemented mapping is good=1 and bad=0. A prediction for class 1 therefore refers to good credit status, not greater default risk.
 
 ## Explore and run
-Open [the notebook](Assignment6modifications.ipynb) in Colab. Provide the German credit CSV, update the personal Drive path and course-template paths, and install the imported dependencies.
+Open [the notebook](credit_risk_explainability.ipynb) in Colab. Provide the German credit CSV, update the personal Drive path and course-template paths, and install the imported dependencies.
 
 ## Limitations and next steps
 - Add the original dataset citation and access instructions.
